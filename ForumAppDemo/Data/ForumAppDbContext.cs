@@ -1,4 +1,5 @@
-﻿using ForumAppDemo.Data.Entities;
+﻿using ForumAppDemo.Data.Configure;
+using ForumAppDemo.Data.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,7 +16,7 @@ namespace ForumAppDemo.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-
+            builder.ApplyConfiguration<Post>(new PostsConfiguration());
 
             base.OnModelCreating(builder);
         }
