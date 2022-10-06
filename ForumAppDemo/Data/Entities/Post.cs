@@ -15,5 +15,8 @@ namespace ForumAppDemo.Data.Entities
         [Required]
         [StringLength(ContentMaxLength)]
         public string Content { get; set; } = null!;
+
+        [Required]
+        public bool IsDeleted { get; set; } = false;
     }
 }
