@@ -1,12 +1,10 @@
-﻿namespace ForumAppDemo.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace ForumAppDemo.Models
 {
-    public class PostViewModel
+    public class PostViewModel : AddPostViewModel
     {
         public int Id { get; set; }
-
-        public string Title { get; set; } = null!;
-
-        public string Content { get; set; } = null!;
 
     }
 }
